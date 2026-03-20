@@ -1,5 +1,6 @@
 ## Report
 
+```
 To: security@escalatorlab.com
 Subject: Security Vulnerability Report: Privilege Escalation in Escalator Challenge VM
 
@@ -84,11 +85,13 @@ Recommended Fix:
 Remove the SUID bit from /usr/bin/find:
   sudo chmod u-s /usr/bin/find
 
+
+
 Conduct a full audit of all SUID binaries and apply the principle of least privilege
 across all user accounts and system binaries.
 
 Please feel free to reach out for further details or clarification.
 
 Best regards,
-[Your Name]
-[Your Contact Information]
+Sheila Fana
+```
